@@ -22,7 +22,7 @@ Welcome to my project repository for the **Datheon Full Stack Web Development In
 
 | No. | Project                                                         | Description                                                                                 | Technologies          | Status      |
 | --- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------- | ----------- |
-| 1   | [Personal Developer Portfolio](./Personal-Developer-Portfolio/) | A personal portfolio showcasing my introduction, skills, projects, and contact information. | HTML, CSS, JavaScript | ✅ Completed |
+| 1   | [Personal Developer Portfolio](https://mohammed-shameem-portfolio.vercel.app/) | A personal portfolio showcasing my introduction, skills, projects, and contact information. | HTML, CSS, JavaScript | ✅ Completed |
 | 2   | Dynamic Task Manager                                            | A web application for managing and organizing tasks.                                        | To be updated         | ⏳ Upcoming  |
 | 3   | Weather App                                                     | A weather application for displaying weather information.                                   | To be updated         | ⏳ Upcoming  |
 | 4   | E-commerce Shopping Cart                                        | An interactive shopping interface with cart functionality.                                  | To be updated         | ⏳ Upcoming  |
@@ -65,7 +65,7 @@ Datheon_Full_Stack_Web_Development_Internship/
 │
 ├── README.md
 │
-├── Personal-Developer-Portfolio/
+├── Task-1-portfolio/
 │   ├── index.html
 │   ├── style.css
 │   ├── script.js
@@ -99,7 +99,7 @@ I am grateful for the opportunity to participate in the Datheon Full Stack Web D
 ## 📬 Connect With Me
 
 * **GitHub:** [Visit my GitHub profile](https://github.com/shameemmohammed678-hue)
-* **LinkedIn:** Add your LinkedIn profile URL here.
+* **LinkedIn:** https://www.linkedin.com/in/mohammed-shameem-developer/
 
 ---
 
