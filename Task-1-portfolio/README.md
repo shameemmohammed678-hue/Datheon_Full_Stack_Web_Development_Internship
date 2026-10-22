@@ -68,7 +68,7 @@ Alternatively, open the project in Visual Studio Code and use the Live Server ex
 
 ## 🌍 Live Demo
 
-**Live Website:** Coming soon.
+**Live Website:** https://mohammed-shameem-portfolio.vercel.app/
 
 The live demo link will be added after deployment.
 
@@ -94,8 +94,8 @@ This project was developed as part of my practical web development learning expe
 
 ## 📬 Connect With Me
 
-* **GitHub:** Add your GitHub profile URL.
-* **LinkedIn:** Add your LinkedIn profile URL.
+* **GitHub:** https://github.com/shameemmohammed678-hue
+* **LinkedIn:** https://www.linkedin.com/in/mohammed-shameem-developer/
 
 ---
 
