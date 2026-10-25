@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmos-weather Intelligence</title>
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+       <div class="dashboard">
+
+        <header>
+            <div>
+                <img src="./assets/images/logo.png" alt="">
+               
+            </div>
+
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#forecast">Forecast</a>
+                <a href="#about">About</a>
+            </nav>
+
+
+             
+
+        </header>
+
+        <div class="heading-box">
+            <div class="head-right">
+                <h1>Discover</h1>
+                <h1><span>Weather</span> Anywhere</h1>
+                <p>Explore real-time weather conditions and accurate five-day forecasts for cities around the world, all in one place.</p>
+            </div>
+            <div class="head-left">
+                <input type="search" name="search" id="city-input" placeholder="Enter a city name (e.g:Chennai,London)"> 
+                <input type="button" value="Search" id="search-button">
+                <div id="loading" class="loading-container" style="display: none;">
+                <div class="spinner"></div>
+                <p>Fetching weather data...</p>
+                </div>
+
+<p id="error-message" class="error-message"></p>
+            </div>
+        </div>
+
+
+        <div class="weather-card">
+
+            <div class="weather-left">
+
+                <div class="temp-card">
+                        <h2 id="city_name">NA</h2>
+                        <p><span id="day">NA</span> | <span id="date">NA</span> | <span id="time">00:00 PM</span></p>
+                        
+                        <h1 id="degree">0℃</h1>
+
+                        <h2 id="climate">Partly Cloudy</h2>
+                        <p id="feels-like">Feels like 0℃</p>
+                        <p ><span id="h">H:0℃ </span>|<span id="l"> L:0℃</span></p>
+                
+                    </div>
+
+
+                <div class="temp-img">
+                        <img src="./assets/images/initial_img.png" alt="" id="weather-img">
+                </div>
+
+            </div>
+
+
+
+
+            <div class="weather-right">
+
+
+
+<div class="weather-detail">
+    <span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#C4C0D0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <path d="M12 22s8-4.5 8-12a8 8 0 0 0-16 0c0 7.5 8 12 8 12z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        Humidity
+    </span>
+    <strong id="humidity">0%</strong>
+</div>
+
+<div class="weather-detail">
+    <span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#C4C0D0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <path d="M3 8h12a3 3 0 1 0-3-3"/>
+            <path d="M2 12h17a3 3 0 1 1-3 3"/>
+            <path d="M4 16h5"/>
+        </svg>
+        Wind Speed
+    </span>
+    <strong id="wind-speed">0 km/h</strong>
+</div>
+
+<div class="weather-detail">
+    <span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#C4C0D0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 12l4-4"/>
+            <circle cx="12" cy="12" r="1" fill="#F044D9" stroke="#F044D9"/>
+        </svg>
+        Pressure
+    </span>
+    <strong id="pressure">0 hPa</strong>
+</div>
+
+<div class="weather-detail">
+    <span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#C4C0D0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+        Visibility
+    </span>
+    <strong id="visibility">0 km</strong>
+</div>
+
+<div class="weather-detail">
+    <span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#F0B8ED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/>
+            <path d="M3 22h18"/>
+        </svg>
+        Sunrise
+    </span>
+    <strong id="sunrise">00:00 AM</strong>
+</div>
+
+<div class="weather-detail">
+    <span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#F0B8ED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <path d="M3 17h18"/>
+            <path d="M5 17a7 7 0 0 1 14 0"/>
+            <path d="M12 2v3M4.93 5.93l2.12 2.12M19.07 5.93l-2.12 2.12"/>
+            <path d="M3 21h18"/>
+        </svg>
+        Sunset
+    </span>
+    <strong id="sunset">00:00 PM</strong>
+</div>
+
+            </div>
+
+       </div>
+
+       </div>
+
+        <div class="forecast-container" id="forecast">
+            <div class="forecast-header">
+                <h1>5 Day Forecast</h1>
+            </div>
+
+            <div class="forecast-box">
+                <div class="f-box" id="day-1">
+                    <h3 id="day-name-1">-</h3>
+                    <p id="day-date-1">-</p>
+                    <img src="./assets/images/initial_img.png" alt="" id="day-img-1">
+                    <h4 id="day-climate-1">NA</h4>
+                    <p id="day-temp-1">0℃</p>
+                </div>
+
+                 <div class="f-box" id="day-2">
+                    <h3 id="day-name-2">-</h3>
+                    <p id="day-date-2">-</p>
+                    <img src="./assets/images/initial_img.png" alt="" id="day-img-2">
+                    <h4 id="day-climate-2">NA</h4>
+                    <p id="day-temp-2">0℃</p>
+                 </div>
+
+                 <div class="f-box" id="day-3">
+                    <h3 id="day-name-3">-</h3>
+                    <p id="day-date-3">-</p>
+                    <img src="./assets/images/initial_img.png" alt="" id="day-img-3">
+                    <h4 id="day-climate-3">NA</h4>
+                    <p id="day-temp-3">0℃</p>
+                 </div>
+
+                 <div class="f-box" id="day-4">
+                    <h3 id="day-name-4">-</h3>
+                    <p id="day-date-4">-</p>
+                    <img src="./assets/images/initial_img.png" alt="" id="day-img-4">
+                    <h4 id="day-climate-4">NA</h4>
+                    <p id="day-temp-4">0℃</p>
+                 </div>
+
+                 <div class="f-box" id="day-5">
+                    <h3 id="day-name-5">-</h3>
+                    <p id="day-date-5">-</p>
+                    <img src="./assets/images/initial_img.png" alt="" id="day-img-5">
+                    <h4 id="day-climate-5">NA</h4>
+                    <p id="day-temp-5">0℃</p>
+                </div>
+
+            </div>
+
+            <div class="forecast-header">
+                <h1>Hourly Forecast</h1>
+            </div>
+
+
+
+           <div class="forecast-box">
+                <div class="f-box" id="hour-1">
+                    <h3 id="hour1-time">--</h3>
+                    <img src="./assets/images/initial_img.png" alt="" id="h-forecast-img1">
+                    <h4 id="hour1-climate">NA</h4>
+                    <p id="hour1-feels-like">0℃</p>
+                </div>
+
+                 <div class="f-box" id="hour-2">
+                    <h3 id="hour2-time">--</h3>
+                    <img src="./assets/images/initial_img.png" alt="" id="h-forecast-img2">
+                    <h4 id="hour2-climate">NA</h4>
+                    <p id="hour2-feels-like">0℃</p>
+                 </div>
+
+                 <div class="f-box" id="hour-3">
+                    <h3 id="hour3-time">--</h3>
+                    <img src="./assets/images/initial_img.png" alt="" id="h-forecast-img3">
+                    <h4 id="hour3-climate">NA</h4>
+                    <p id="hour3-feels-like">0℃</p>
+                 </div>
+
+                 <div class="f-box" id="hour-4">
+                    <h3 id="hour4-time">--</h3>
+                    <img src="./assets/images/initial_img.png" alt="" id="h-forecast-img4">
+                    <h4 id="hour4-climate">NA</h4>
+                    <p id="hour4-feels-like">0℃</p>
+                 </div>
+
+                 <div class="f-box" id="hour-5">
+                    <h3 id="hour5-time">--</h3>
+                    <img src="./assets/images/initial_img.png" alt="" id="h-forecast-img5">
+                    <h4 id="hour5-climate">NA</h4>
+                    <p id="hour5-feels-like">0℃</p>
+                </div>
+
+                  <div class="f-box" id="hour-6">
+                    <h3 id="hour6-time">--</h3>
+                    <img src="./assets/images/initial_img.png" alt="" id="h-forecast-img6">
+                    <h4 id="hour6-climate">NA</h4>
+                    <p id="hour6-feels-like">0℃</p>
+                </div>
+
+
+
+        </div>
+        <div class="about-box">
+
+            <div id="about">
+                <div class="about-left">
+                    <h3>Atmos - Weather Inteligence</h3>
+                    <p>Atmos is a real-time weather application designed to keep you informed about the weather anywhere in the world. Powered by the OpenWeatherMap API, it provides current weather conditions, temperature, humidity, wind speed, atmospheric pressure, and five-day forecasts. With dynamic weather visuals, an intuitive interface, and responsive design, Atmos makes exploring weather conditions simple, seamless, and enjoyable.
+</p>
+                    <div><h4>Developed By MOHAMMED SHAMEEM</h4></div>
+                </div>
+                <div class="about-right">
+                        <img src="./assets/images/logo.png" alt="">
+                </div>
+            </div>
+                
+            </div>
+
+        </div>
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
