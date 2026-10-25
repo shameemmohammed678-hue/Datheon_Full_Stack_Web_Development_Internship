@@ -23,8 +23,8 @@ Welcome to my project repository for the **Datheon Full Stack Web Development In
 | No. | Project                                                         | Description                                                                                 | Technologies          | Status      |
 | --- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------- | ----------- |
 | 1   | [Personal Developer Portfolio](https://mohammed-shameem-portfolio.vercel.app/) | A personal portfolio showcasing my introduction, skills, projects, and contact information. | HTML, CSS, JavaScript | ✅ Completed |
-| 2   | Dynamic Task Manager                                            | A web application for managing and organizing tasks.                                        | To be updated         | ⏳ Upcoming  |
-| 3   | Weather App                                                     | A weather application for displaying weather information.                                   | To be updated         | ⏳ Upcoming  |
+| 2   | Dynamic Task Manager                                            | A web application for managing and organizing tasks.                                        | To be updated | ✅ Completed |
+| 3   | Weather App                                                     | A weather application for displaying weather information.                                   | https://atmos-weather-intelligence.vercel.app/  | ✅ Completed  |
 | 4   | E-commerce Shopping Cart                                        | An interactive shopping interface with cart functionality.                                  | To be updated         | ⏳ Upcoming  |
 
 *Project status and technology details will be updated as development progresses.*
@@ -45,16 +45,16 @@ Live demo links will be added after the projects are deployed.
 
 | Project                      | Live Demo   |
 | ---------------------------- | ----------- |
-| Personal Developer Portfolio | Coming soon |
+| Personal Developer Portfolio | https://mohammed-shameem-portfolio.vercel.app/|
 | Dynamic Task Manager         | Coming soon |
-| Weather App                  | Coming soon |
+| Weather App                  | https://atmos-weather-intelligence.vercel.app/|
 | E-commerce Shopping Cart     | Coming soon |
 
 ## 📈 Progress
 
 * [x] Personal Developer Portfolio
 * [ ] Dynamic Task Manager
-* [ ] Weather App
+* [x] Weather App
 * [ ] E-commerce Shopping Cart
 * [ ] Final repository documentation and review
 
